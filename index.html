@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approval Template</title>
+</head>
+<body>
+    <h3>Create Input Box</h3>
+    <input type="text" id="acc_number" placeholder="Enter account number">
+    <input type="text" id="rep_code" placeholder="Enter rep code">
+    <input type="text" id="acc_name" placeholder="Enter account name">
+    <input type="text" id="branch_code" placeholder="Enter branch code">
+
+    <input type="text" id="qty" placeholder="Enter quantity">
+    <input type="text" id="item_code" placeholder="Enter item code">
+    <input type="text" id="item description" placeholder="Enter item description">
+
+    <input type="text" id="sp" placeholder="Enter system price">
+    <input type="text" id="sp_gp" placeholder="Enter system gp">
+    <input type="text" id="np" placeholder="Enter new price">
+    <input type="text" id="np_gp" placeholder="Enter new gp">
+
+    <button type="button" onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+    // Here the value is stored in new variable x 
+    function myFunction() {
+        var acc_number = document.getElementById("acc_number").value;
+        var rep_code = document.getElementById("rep_code").value;
+        var acc_name = document.getElementById("acc_name").value;
+        var branch_code = document.getElementById("branch_code").value;
+
+        var qty = document.getElementById("qty").value;
+        var item_code = document.getElementById("item_code").value;
+        var item_description = document.getElementById("item description").value;
+
+        var sp = document.getElementById("sp").value;
+        var sp_gp = document.getElementById("sp_gp").value;
+        var np = document.getElementById("np").value;
+        var np_gp = document.getElementById("np_gp").value;
+        
+        var multilineString ='<p> Good day. </p>' +
+            acc_number + ' - ' + rep_code + ' - ' +acc_name + ' - ' + branch_code +
+            '<p> Please assist: </p>' + 
+            qty + ' x ' + item_code + ' ' + item_description +
+            '<p> SP: R</>' + sp + ' @ ' + sp_gp +
+            '<p> NP: R</>' + np + ' @ ' + np_gp +
+            '<p>As per ' + rep_code + '/Customer </p>' +
+            '<p> Thank you.</p>';
+
+        document.getElementById("demo").innerHTML = multilineString;
+    }
+    </script>
+</body>
+</html>
