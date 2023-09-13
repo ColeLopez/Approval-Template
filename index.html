@@ -45,10 +45,10 @@
         var multilineString ='<p> Good day. </p>' +
             acc_number + ' - ' + rep_code + ' - ' +acc_name + ' - ' + branch_code +
             '<p> Please assist: </p>' + 
-            qty + ' x ' + item_code + ' ' + item_description +
-            '<p> SP: R</>' + sp + ' @ ' + sp_gp +
-            '<p> NP: R</>' + np + ' @ ' + np_gp +
-            '<p>As per ' + rep_code + '/Customer </p>' +
+            '</p>' qty + ' x ' + item_code + ' ' + item_description '</p>'+
+            '<p>SP: R</>' + sp + ' @ ' + sp_gp '</p>' +
+            '<p>NP: R</>' + np + ' @ ' + np_gp '</p>' +
+            '<p>As per ' + rep_code + '/Customer '</p>' +
             '<p> Thank you.</p>';
 
         document.getElementById("demo").innerHTML = multilineString;
