@@ -26,43 +26,13 @@
         New Price:<input type="text" id="np" placeholder="Enter new price">
         New GP%:<input type="text" id="np_gp" placeholder="Enter new gp">
         <br>
-        <button type="button" onclick="myFunction()">Submit</button>
+        <input type="button" onclick="myFunction()" value="Submit">
         <input type= "button" onclick= "clearInput()" value= "Clear Data">
         <p id="demo"></p>
         
-        <script>
-        // Here the value is stored in new variable x 
-        function myFunction() {
-            var acc_number = document.getElementById("acc_number").value;
-            var rep_code = document.getElementById("rep_code").value;
-            var acc_name = document.getElementById("acc_name").value;
-            var branch_code = document.getElementById("branch_code").value;
-    
-            var qty = document.getElementById("qty").value;
-            var item_code = document.getElementById("item_code").value;
-            var item_description = document.getElementById("item description").value;
-    
-            var sp = document.getElementById("sp").value;
-            var sp_gp = document.getElementById("sp_gp").value;
-            var np = document.getElementById("np").value;
-            var np_gp = document.getElementById("np_gp").value;
-            
-            var multilineString ='<p> Good day. </p>' +
-                acc_number + ' - ' + rep_code + ' - ' +acc_name + ' - ' + branch_code +
-                '<p> Please assist: </p>' + 
-                qty + ' x ' + item_code + ' - ' + item_description +
-                '<p> SP: R</>' + sp + ' @ ' + sp_gp +
-                '<p> NP: R</>' + np + ' @ ' + np_gp +
-                '<p>As per ' + rep_code + '/Customer </p>' +
-                '<p> Thank you.</p>';
-    
-            document.getElementById("demo").innerHTML = multilineString;
-        }
-        function clearInput(){
-            var element = document.getElementById("form")
-             element.reset()
-          }
-        </script>
+        
+        <script lang="javascript" type="text/javascript" src="scripts.js"></script>
+
     </form>
 </body>
 </html>
