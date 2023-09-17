@@ -1,3 +1,15 @@
+function removeSpaces(string) {
+    return string.split(' ').join('');
+}
+
+textarea = document.querySelector(".data");
+textarea.addEventListener('input', autoResize, false);
+ 
+function autoResize() {
+    this.style.height = 'auto';
+    this.style.height = this.scrollHeight + 'px';
+}
+
 function myFunction() {
     var acc_number = document.getElementById("acc_number").value;
     var rep_code = document.getElementById("rep_code").value;
@@ -21,7 +33,21 @@ function myFunction() {
         'NP: R' + np + ' @ ' + np_gp + '<br><br>' +
         '<p>As per ' + rep_code + '/Customer </p>' +
         '<p> Thank you.</p>';
+
+    var multiText =  'Good Day\n\n'+
+    acc_number + ' - ' + rep_code + ' - ' + acc_name + ' - ' + branch_code + '\n\n' +
+    'Please assist:\n' +
+    qty + ' x ' + item_code + ' - ' + item_description + '\n' +
+    'SP: R' + sp + ' @ ' + sp_gp + '\n' +
+    'NP: R' + np + ' @ ' + np_gp + '\n\n' +
+    'As per ' + rep_code + '/Customer \n\n' +
+    'Thank you.';
+
     document.getElementById("demo").innerHTML = multilineString;
+    
+    navigator.clipboard.writeText(multiText).then(() => {
+        alert("Copied to clipboard.");
+    });
 }
 
 function clearInput(){

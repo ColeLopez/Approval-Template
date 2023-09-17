@@ -4,35 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Approval Template</title>
 </head>
 <body>
-    <h3>Approval Template</h3>
+    <div class="header">
+        <h3>Approval Template</h3>
+    </div>
+    <div class="form_centre">
+        <form id="form">
+            <div class="textarea">
+                <textarea  class="data" id="q_data" name="q_data" placeholder="Enter quote details eg: 315/80R22.5."></textarea>
+            </div>
+            <br>
+            <div class="approval_section">
+                <div class="account">
+                    <label>Account Number: </label><input type="text" id="acc_number" placeholder="Enter account number" onblur="this.value=removeSpaces(this.value)">
+                    <label>Rep Code: </label><input type="text" id="rep_code" placeholder="Enter rep code" onblur="this.value=removeSpaces(this.value)">
+                    <label>Account Name: </label><input type="text" id="acc_name" placeholder="Enter account name" onblur="this.value=removeSpaces(this.value)">
+                    <label>Branch Code: </label><input type="text" id="branch_code" placeholder="Enter branch code" onblur="this.value=removeSpaces(this.value)">
+                </div>
+                <br>
+                <div class="item">
+                    <div class="item_sub">
+                        <label>Quantity: </label><input type="text" id="qty" placeholder="Enter quantity" onblur="this.value=removeSpaces(this.value)">
+                        <label>Item Code: </label><input type="text" id="item_code" placeholder="Enter item code" onblur="this.value=removeSpaces(this.value)">
+                        <label>Item Description: </label><input type="text" id="item description" placeholder="Enter item description" onblur="this.value=removeSpaces(this.value)">
+                    </div>
+                    <br>
+                    <div class="item_price">
+                        <label>System Price: </label><input type="text" id="sp" placeholder="Enter system price" onblur="this.value=removeSpaces(this.value)">
+                        <label>System GP%: </label><input type="text" id="sp_gp" placeholder="Enter system gp" onblur="this.value=removeSpaces(this.value)">
+                        <label>New Price: </label><input type="text" id="np" placeholder="Enter new price" onblur="this.value=removeSpaces(this.value)">
+                        <label>New GP%: </label><input type="text" id="np_gp" placeholder="Enter new gp" onblur="this.value=removeSpaces(this.value)">
+                    </div>
+                    
+                </div>
+            </div>
+            <br>
+            <input type="button" onclick="myFunction()" value="Submit">
+            <input type= "button" onclick= "clearInput()" value= "Clear Data">
+            <p id="demo"></p>
+            
+            
+            <script lang="javascript" type="text/javascript" src="scripts.js"></script>
     
-    <form id="form">
-        <textarea id="q_data" name="q_data" rows="" cols="20"></textarea>
-        <br>
-        Account Number:<input type="text" id="acc_number" placeholder="Enter account number">
-        Rep Code:<input type="text" id="rep_code" placeholder="Enter rep code">
-        Account Name:<input type="text" id="acc_name" placeholder="Enter account name">
-        Branch Code:<input type="text" id="branch_code" placeholder="Enter branch code">
-        <br>
-        Quantity:<input type="text" id="qty" placeholder="Enter quantity">
-        Item Code:<input type="text" id="item_code" placeholder="Enter item code">
-        Item Description:<input type="text" id="item description" placeholder="Enter item description">
-        <br>
-        System Price:<input type="text" id="sp" placeholder="Enter system price">
-        System GP%:<input type="text" id="sp_gp" placeholder="Enter system gp">
-        New Price:<input type="text" id="np" placeholder="Enter new price">
-        New GP%:<input type="text" id="np_gp" placeholder="Enter new gp">
-        <br>
-        <input type="button" onclick="myFunction()" value="Submit">
-        <input type= "button" onclick= "clearInput()" value= "Clear Data">
-        <p id="demo"></p>
-        
-        
-        <script lang="javascript" type="text/javascript" src="scripts.js"></script>
-
-    </form>
+        </form>
+    </div>
+    
 </body>
 </html>
