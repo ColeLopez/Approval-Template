@@ -1,5 +1,5 @@
 function removeSpaces(string) {
-    return string.trim();
+    return string.trimEnd();
 }
 
 textarea = document.querySelector(".data");
