@@ -52,5 +52,51 @@ function myFunction() {
 
 function clearInput(){
     var element = document.getElementById("form")
-     element.reset()
+     element.reset();
   }
+
+var moreData = [];
+
+function addMore(){
+    var multiText1 =qty + ' x ' + item_code + ' - ' + item_description + '\n' +
+    'SP: R' + sp + ' @ ' + sp_gp + '\n' +
+    'NP: R' + np + ' @ ' + np_gp + '\n\n';
+
+    moreData.push(multiText);
+
+    console.log(moreData);
+
+    navigator.clipboard.writeText(multiText1).then(() => {
+        var qty = document.getElementById("qty").value;
+        var item_code = document.getElementById("item_code").value;
+        var item_description = document.getElementById("item description").value;
+
+        var sp = document.getElementById("sp").value;
+        var sp_gp = document.getElementById("sp_gp").value;
+        var np = document.getElementById("np").value;
+        var np_gp = document.getElementById("np_gp").value;
+
+        qty.reset();
+        item_code.reset();
+        item_description.reset();
+        sp.reset();
+        sp_gp.reset();
+        np.reset();
+        np_gp.reset();
+
+    });
+
+    function submitMore(){
+        var multiText2 =  'Good Day\n\n'+
+        acc_number + ' - ' + rep_code + ' - ' + acc_name + ' - ' + branch_code + '\n\n' +
+        'Please assist:\n' +
+        moreData +'As per ' + rep_code + '/Customer \n\n' +
+        'Thank you.';
+
+        console.log(multiText2)
+        
+        navigator.clipboard.writeText(multiText2).then(() => {
+            alert("Copied to clipboard.");
+        });
+    }
+}
