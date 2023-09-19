@@ -72,9 +72,7 @@ function addMore(){
     'NP: R' + np + ' @ ' + np_gp + '\n\n';
 
     moreData.push(multiText1);
-    let join = moreData.join(" ")
-    moreData.push(join)
-    console.log(moreData);
+    console.log(moreData.join(' '));
 }
 
 const btn = document.getElementById('addmore');
@@ -100,7 +98,7 @@ function submitMore(){
     var multiText2 =  'Good Day\n\n'+
     acc_number1 + ' - ' + rep_code1 + ' - ' + acc_name1 + ' - ' + branch_code1 + '\n\n' +
     'Please assist:\n' +
-    moreData +
+    moreData+
     '\nAs per ' + rep_code + '/Customer \n\n' +
     'Thank you.';
 
