@@ -76,7 +76,6 @@ function addMore(){
 }
 
 const btn = document.getElementById('addmore');
-
 btn.addEventListener('click', function handleClick(event) {
   // 👇️ if you are submitting a form
   event.preventDefault();
