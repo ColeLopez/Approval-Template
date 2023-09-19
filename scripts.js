@@ -75,36 +75,34 @@ function addMore(){
     console.log(moreData);
 
     navigator.clipboard.writeText(multiText1).then(() => {
-        var qty = document.getElementById("qty");
-        var item_code = document.getElementById("item_code");
-        var item_description = document.getElementById("item description");
-
-        var sp = document.getElementById("sp");
-        var sp_gp = document.getElementById("sp_gp");
-        var np = document.getElementById("np");
-        var np_gp = document.getElementById("np_gp");
         
-        qty.reset();
-        item_code.reset();
-        item_description.reset();
-        sp.reset();
-        sp_gp.reset();
-        np.reset();
-        np_gp.reset();
-
     });
+}
 
-    function submitMore(){
-        var multiText2 =  'Good Day\n\n'+
-        acc_number + ' - ' + rep_code + ' - ' + acc_name + ' - ' + branch_code + '\n\n' +
-        'Please assist:\n' +
-        moreData +'As per ' + rep_code + '/Customer \n\n' +
-        'Thank you.';
+const btn = document.getElementById('addmore');
 
-        console.log(multiText2)
-        
-        navigator.clipboard.writeText(multiText2).then(() => {
-            alert("Copied to clipboard.");
-        });
-    }
+btn.addEventListener('click', function handleClick(event) {
+  // 👇️ if you are submitting a form
+  event.preventDefault();
+
+  const inputs = document.querySelectorAll('#qty, #item_code');
+
+  inputs.forEach(input => {
+    input.value = '';
+  });
+});
+
+
+function submitMore(){
+    var multiText2 =  'Good Day\n\n'+
+    acc_number + ' - ' + rep_code + ' - ' + acc_name + ' - ' + branch_code + '\n\n' +
+    'Please assist:\n' +
+    moreData +'As per ' + rep_code + '/Customer \n\n' +
+    'Thank you.';
+
+    console.log(multiText2)
+    
+    navigator.clipboard.writeText(multiText2).then(() => {
+        alert("Copied to clipboard.");
+    });
 }
