@@ -27,7 +27,7 @@ function myFunction() {
     
     var multilineString ='<p> Good day. </p>' +
         acc_number + ' - ' + rep_code + ' - ' + acc_name + ' - ' + branch_code + '<br><br>' +
-        'Please assist:' + 
+        'Please assist:' + '<br>' +
         qty + ' x ' + item_code + ' - ' + item_description + '<br>' + 
         'SP: R' + sp + ' @ ' + sp_gp + '<br>' +
         'NP: R' + np + ' @ ' + np_gp + '<br><br>' +
