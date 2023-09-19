@@ -71,7 +71,7 @@ function addMore(){
     'SP: R' + sp + ' @ ' + sp_gp + '\n' +
     'NP: R' + np + ' @ ' + np_gp + '\n\n';
 
-    moreData.push(multiText);
+    moreData.push(multiText1);
 
     console.log(moreData);
 
