@@ -89,7 +89,6 @@ btn.addEventListener('click', function handleClick(event) {
 
 
 function submitMore(){
-
     var acc_number1 = document.getElementById("acc_number").value;
     var rep_code1 = document.getElementById("rep_code").value;
     var acc_name1 = document.getElementById("acc_name").value;
