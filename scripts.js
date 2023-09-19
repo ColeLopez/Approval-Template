@@ -66,16 +66,16 @@ function addMore(){
 
     console.log(moreData);
 
+    var qty = document.getElementById("qty").value;
+    var item_code = document.getElementById("item_code").value;
+    var item_description = document.getElementById("item description").value;
+
+    var sp = document.getElementById("sp").value;
+    var sp_gp = document.getElementById("sp_gp").value;
+    var np = document.getElementById("np").value;
+    var np_gp = document.getElementById("np_gp").value;
+
     navigator.clipboard.writeText(multiText1).then(() => {
-        var qty = document.getElementById("qty").value;
-        var item_code = document.getElementById("item_code").value;
-        var item_description = document.getElementById("item description").value;
-
-        var sp = document.getElementById("sp").value;
-        var sp_gp = document.getElementById("sp_gp").value;
-        var np = document.getElementById("np").value;
-        var np_gp = document.getElementById("np_gp").value;
-
         qty.reset();
         item_code.reset();
         item_description.reset();
