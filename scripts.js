@@ -72,7 +72,7 @@ function addMore(){
     'NP: R' + np + ' @ ' + np_gp + '\n\n';
 
     moreData.push(multiText1);
-    console.log(moreData.join(' '));
+    console.log(moreData.join(''));
 }
 
 const btn = document.getElementById('addmore');
