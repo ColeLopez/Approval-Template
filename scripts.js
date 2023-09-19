@@ -97,7 +97,7 @@ function submitMore(){
     var multiText2 =  'Good Day\n\n'+
     acc_number1 + ' - ' + rep_code1 + ' - ' + acc_name1 + ' - ' + branch_code1 + '\n\n' +
     'Please assist:\n' +
-    moreData+
+    moreData.join('') +
     '\nAs per ' + rep_code + '/Customer \n\n' +
     'Thank you.';
 
