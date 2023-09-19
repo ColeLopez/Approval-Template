@@ -94,13 +94,11 @@ function submitMore(){
     var acc_name1 = document.getElementById("acc_name").value;
     var branch_code1 = document.getElementById("branch_code").value;
 
-    var newArr = moreData.join('');
-
     var multiText2 =  'Good Day\n\n'+
     acc_number1 + ' - ' + rep_code1 + ' - ' + acc_name1 + ' - ' + branch_code1 + '\n\n' +
     'Please assist:\n' +
-     newArr+
-    '\nAs per ' + rep_code + '/Customer \n\n' +
+    moreData.join('')+
+    '\nAs per ' + rep_code1 + '/Customer \n\n' +
     'Thank you.';
 
 
