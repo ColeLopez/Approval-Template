@@ -72,11 +72,9 @@ function addMore(){
     'NP: R' + np + ' @ ' + np_gp + '\n\n';
 
     moreData.push(multiText1);
+    let join = moreData.join(" ")
+    moreData.push(join)
     console.log(moreData);
-
-    navigator.clipboard.writeText(multiText1).then(() => {
-        
-    });
 }
 
 const btn = document.getElementById('addmore');
@@ -85,7 +83,7 @@ btn.addEventListener('click', function handleClick(event) {
   // 👇️ if you are submitting a form
   event.preventDefault();
 
-  const inputs = document.querySelectorAll('#qty, #item_code');
+  const inputs = document.querySelectorAll('#qty, #item_code,#item description,#sp,#sp_gp,#np,#np_gp');
 
   inputs.forEach(input => {
     input.value = '';
