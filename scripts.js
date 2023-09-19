@@ -18,7 +18,7 @@ function myFunction() {
 
     var qty = document.getElementById("qty").value;
     var item_code = document.getElementById("item_code").value;
-    var item_description = document.getElementById("item description").value;
+    var item_description = document.getElementById("item_description").value;
 
     var sp = document.getElementById("sp").value;
     var sp_gp = document.getElementById("sp_gp").value;
@@ -60,7 +60,7 @@ var moreData = [];
 function addMore(){
     var qty = document.getElementById("qty").value;
     var item_code = document.getElementById("item_code").value;
-    var item_description = document.getElementById("item description").value;
+    var item_description = document.getElementById("item_description").value;
 
     var sp = document.getElementById("sp").value;
     var sp_gp = document.getElementById("sp_gp").value;
@@ -80,7 +80,7 @@ btn.addEventListener('click', function handleClick(event) {
   // 👇️ if you are submitting a form
   event.preventDefault();
 
-  const inputs = document.querySelectorAll('#qty, #item_code,#item description,#sp,#sp_gp,#np,#np_gp');
+  const inputs = document.querySelectorAll('#qty, #item_code, #item description, #sp, #sp_gp, #np, #np_gp');
 
   inputs.forEach(input => {
     input.value = '';
@@ -101,10 +101,6 @@ function submitMore(){
     '\nAs per ' + rep_code1 + '/Customer \n\n' +
     'Thank you.';
 
-
-
-    console.log(multiText2)
-    
     navigator.clipboard.writeText(multiText2).then(() => {
         alert("Copied to clipboard.");
     });
