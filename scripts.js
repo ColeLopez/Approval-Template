@@ -94,6 +94,11 @@ btn.addEventListener('click', function handleClick(event) {
 
 
 function submitMore(){
+    var acc_number = document.getElementById("acc_number").value;
+    var rep_code = document.getElementById("rep_code").value;
+    var acc_name = document.getElementById("acc_name").value;
+    var branch_code = document.getElementById("branch_code").value;
+
     var multiText2 =  'Good Day\n\n'+
     acc_number + ' - ' + rep_code + ' - ' + acc_name + ' - ' + branch_code + '\n\n' +
     'Please assist:\n' +
