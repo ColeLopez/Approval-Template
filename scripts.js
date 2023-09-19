@@ -58,14 +58,6 @@ function clearInput(){
 var moreData = [];
 
 function addMore(){
-    var multiText1 =qty + ' x ' + item_code + ' - ' + item_description + '\n' +
-    'SP: R' + sp + ' @ ' + sp_gp + '\n' +
-    'NP: R' + np + ' @ ' + np_gp + '\n\n';
-
-    moreData.push(multiText);
-
-    console.log(moreData);
-
     var qty = document.getElementById("qty").value;
     var item_code = document.getElementById("item_code").value;
     var item_description = document.getElementById("item description").value;
@@ -74,6 +66,14 @@ function addMore(){
     var sp_gp = document.getElementById("sp_gp").value;
     var np = document.getElementById("np").value;
     var np_gp = document.getElementById("np_gp").value;
+
+    var multiText1 =qty + ' x ' + item_code + ' - ' + item_description + '\n' +
+    'SP: R' + sp + ' @ ' + sp_gp + '\n' +
+    'NP: R' + np + ' @ ' + np_gp + '\n\n';
+
+    moreData.push(multiText);
+
+    console.log(moreData);
 
     navigator.clipboard.writeText(multiText1).then(() => {
         qty.reset();
