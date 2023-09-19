@@ -72,7 +72,6 @@ function addMore(){
     'NP: R' + np + ' @ ' + np_gp + '\n\n';
 
     moreData.push(multiText1);
-
     console.log(moreData);
 
     navigator.clipboard.writeText(multiText1).then(() => {
