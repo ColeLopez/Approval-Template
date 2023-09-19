@@ -76,6 +76,15 @@ function addMore(){
     console.log(moreData);
 
     navigator.clipboard.writeText(multiText1).then(() => {
+        var qty = document.getElementById("qty");
+        var item_code = document.getElementById("item_code");
+        var item_description = document.getElementById("item description");
+
+        var sp = document.getElementById("sp");
+        var sp_gp = document.getElementById("sp_gp");
+        var np = document.getElementById("np");
+        var np_gp = document.getElementById("np_gp");
+        
         qty.reset();
         item_code.reset();
         item_description.reset();
