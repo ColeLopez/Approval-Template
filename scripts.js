@@ -53,7 +53,7 @@ function myFunction() {
 function clearInput(){
     var element = document.getElementById("form")
      element.reset();
-  }
+}
 
 var moreData = [];
 
@@ -69,7 +69,7 @@ function addMore(){
     navigator.clipboard.writeText(multiText1).then(() => {
         var qty = document.getElementById("qty").value;
         var item_code = document.getElementById("item_code").value;
-        var item_description = document.getElementById("item description").value;
+        var item_description = document.getElementById("item_description").value;
 
         var sp = document.getElementById("sp").value;
         var sp_gp = document.getElementById("sp_gp").value;
