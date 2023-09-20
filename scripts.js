@@ -89,11 +89,11 @@ btn.addEventListener('click', function handleClick(event) {
 
 const checkbox = document.getElementById('checkMulti');
 
-const btn = document.getElementById('submit');
+const submit_btn = document.getElementById('submit');
 
 checkbox.addEventListener('click', function handleClick() {
   if (checkbox.checked) {
-    btn.style.display = 'none';
+    submit.style.display = 'none';
   } else {
     btn.style.display = 'show';
   }
