@@ -95,7 +95,7 @@ checkbox.addEventListener('click', function handleClick() {
   if(checkbox.checked) {
     submit_btn.style.display = 'none';
   } else {
-    submit_btn.style.display = 'show';
+    submit_btn.style.display = 'block';
   }
 });
 
