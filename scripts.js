@@ -87,6 +87,17 @@ btn.addEventListener('click', function handleClick(event) {
   });
 });
 
+const checkbox = document.getElementById('checkMulti');
+
+const btn = document.getElementById('submit');
+
+checkbox.addEventListener('click', function handleClick() {
+  if (checkbox.checked) {
+    btn.style.display = 'none';
+  } else {
+    btn.style.display = 'show';
+  }
+});
 
 function submitMore(){
     var acc_number1 = document.getElementById("acc_number").value;
@@ -105,3 +116,4 @@ function submitMore(){
         alert("Copied to clipboard.");
     });
 }
+
