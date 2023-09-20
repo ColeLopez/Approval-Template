@@ -93,9 +93,9 @@ const submit_btn = document.getElementById('submit');
 
 checkbox.addEventListener('click', function handleClick() {
   if (checkbox.checked) {
-    submit.style.display = 'none';
+    submit_btn.style.display = 'none';
   } else {
-    btn.style.display = 'show';
+    submit_btn.style.display = 'show';
   }
 });
 
