@@ -92,7 +92,7 @@ const checkbox = document.getElementById('checkMulti');
 const submit_btn = document.getElementById('submit');
 
 checkbox.addEventListener('click', function handleClick() {
-  if (checkbox.checked) {
+  if(checkbox.checked) {
     submit_btn.style.display = 'none';
   } else {
     submit_btn.style.display = 'show';
