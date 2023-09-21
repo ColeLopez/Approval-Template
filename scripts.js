@@ -114,6 +114,7 @@ function submitMore(){
 
     navigator.clipboard.writeText(multiText2).then(() => {
         alert("Copied to clipboard.");
+        moreData = [];
     });
 }
 
