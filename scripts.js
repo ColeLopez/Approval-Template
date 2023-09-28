@@ -118,9 +118,19 @@ function submitMore(){
     });
 }
 
-document.querySelectorAll(".nav-link").forEach((link) => {
-  if (link.href === window.location.href) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
-  }
+// document.querySelectorAll(".nav-link").forEach((link) => {
+//   if (link.href === window.location.href) {
+//       link.classList.add("active");
+//       link.setAttribute("aria-current", "page");
+//   }
+// });
+
+var menuItems = document.querySelectorAll('.nav-link');
+  var len = menuItems.length;
+  var current_location = location.href;
+  menuItems.forEach(element => {
+    if (current_location === element.href) {
+      // console.log(element.href);
+      element.className = "active";
+    }
 });
