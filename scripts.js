@@ -118,18 +118,17 @@ function submitMore(){
     });
 }
 
-const current = 0;
-for (var i = 0; i < document.links.length; i++) {
-    if (document.links[i].href === document.URL) {
-        current = i;
-    }
-}
-document.links[current].className = 'active';
+document.querySelectorAll(".nav-link").forEach((link) => {
+  if (link.href === window.location.href) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+  }
+});
 
-// $(function(){
-//   $('a').each(function(){
-//       if ($(this).prop('href') == window.location.href) {
-//           $(this).addClass('active'); $(this).parents('li').addClass('active');
-//       }
-//   });
-// });
+$(function(){
+  $('a').each(function(){
+      if ($(this).prop('href') == window.location.href) {
+          $(this).addClass('active'); $(this).parents('li').addClass('active');
+      }
+  });
+});
