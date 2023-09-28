@@ -125,12 +125,16 @@ function submitMore(){
 //   }
 // });
 
-var menuItems = document.querySelectorAll('.nav-link');
-  var len = menuItems.length;
-  var current_location = location.href;
-  menuItems.forEach(element => {
-    if (current_location === element.href) {
-      // console.log(element.href);
-      element.className = "active";
-    }
+jQuery(document).ready(function($){
+  // Get current path and find target link
+  var path = window.location.pathname.split("/").pop();
+  
+  // Account for home page with empty path
+  if ( path == '' ) {
+    path = 'index.html';
+  }
+      
+  var target = $('top-nav a[href="'+path+'"]');
+  // Add active class to target link
+  target.addClass('active');
 });
