@@ -124,3 +124,8 @@ document.querySelectorAll(".nav-link").forEach((link) => {
       link.setAttribute("aria-current", "page");
   }
 });
+
+const current = window.location.href;
+document.querySelectorAll(`#nav-tab a[href*="${current}"]`).forEach(elem => { 
+  elem.classList.add("active");
+});
