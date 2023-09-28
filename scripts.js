@@ -118,23 +118,9 @@ function submitMore(){
     });
 }
 
-// document.querySelectorAll(".nav-link").forEach((link) => {
-//   if (link.href === window.location.href) {
-//       link.classList.add("active");
-//       link.setAttribute("aria-current", "page");
-//   }
-// });
-
-jQuery(document).ready(function($){
-  // Get current path and find target link
-  var path = window.location.pathname.split("/").pop();
-  
-  // Account for home page with empty path
-  if ( path == '' ) {
-    path = 'index.html';
+document.querySelectorAll(".nav-link").forEach((link) => {
+  if (link.href === window.location.href) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
   }
-      
-  var target = $('top-nav a[href="'+path+'"]');
-  // Add active class to target link
-  target.addClass('active');
 });
