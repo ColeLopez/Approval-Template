@@ -87,17 +87,17 @@ btn.addEventListener('click', function handleClick(event) {
   });
 });
 
-const checkbox = document.getElementById('checkMulti');
+// const checkbox = document.getElementById('checkMulti');
 
-const submit_btn = document.getElementById('submit');
+// const submit_btn = document.getElementById('submit');
 
-checkbox.addEventListener('click', function handleClick() {
-  if(checkbox.checked) {
-    submit_btn.style.display = 'none';
-  } else {
-    submit_btn.style.display = 'block';
-  }
-});
+// checkbox.addEventListener('click', function handleClick() {
+//   if(checkbox.checked) {
+//     submit_btn.style.display = 'none';
+//   } else {
+//     submit_btn.style.display = 'block';
+//   }
+// });
 
 function submitMore(){
     var acc_number1 = document.getElementById("acc_number").value;
