@@ -50,7 +50,7 @@ body::after{
     background-color: #111;
 }
 
-.nav-link.active{
+.active{
     background-color: #4CAF50;
 }
 
