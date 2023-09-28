@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muilt Item Approval</title>
+</head>
+<body>
+    <nav class="top-nav">
+        <ul>
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="mutil-approval.html">Multi</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header">
+            <h3>Approval Template</h3>
+        </div>
+    </header>
+
+    <div class="form_centre">
+        <form id="form">
+            <div class="textarea">
+                <textarea  class="data" id="q_data" name="q_data" placeholder="Enter quote details eg: 315/80R22.5."></textarea>
+            </div>
+            <br>
+            <div class="approval_section">
+                <div class="account">
+                    <label for="acc_number">Account Number: </label><input type="text" id="acc_number" placeholder="Enter account number" onblur="this.value=removeSpaces(this.value)">
+                    <label for="rep_code">Rep Code: </label><input type="text" id="rep_code" placeholder="Enter rep code" onblur="this.value=removeSpaces(this.value)">
+                    <label for="acc_name">Account Name: </label><input type="text" id="acc_name" placeholder="Enter account name" onblur="this.value=removeSpaces(this.value)">
+                    <label for="branch_code">Branch Code: </label><input type="text" id="branch_code" placeholder="Enter branch code" onblur="this.value=removeSpaces(this.value)">
+                </div>
+                <br>
+                <div class="item">
+                    <div class="item_sub">
+                        <label for="qty">Quantity: </label><input type="text" id="qty" placeholder="Enter quantity" onblur="this.value=removeSpaces(this.value)">
+                        <label for="item_code">Item Code: </label><input type="text" id="item_code" placeholder="Enter item code" onblur="this.value=removeSpaces(this.value)">
+                        <label for="item_description">Item Description: </label><input type="text" id="item_description" placeholder="Enter item description" onblur="this.value=removeSpaces(this.value)">
+                    </div>
+                    <br>
+                    <div class="item_price">
+                        <label for="sp">System Price: </label><input type="text" id="sp" placeholder="Enter system price" onblur="this.value=removeSpaces(this.value)">
+                        <label for="sp_gp">System GP%: </label><input type="text" id="sp_gp" placeholder="Enter system gp" onblur="this.value=removeSpaces(this.value)">
+                        <label for="np">New Price: </label><input type="text" id="np" placeholder="Enter new price" onblur="this.value=removeSpaces(this.value)">
+                        <label for="np_gp">New GP%: </label><input type="text" id="np_gp" placeholder="Enter new gp" onblur="this.value=removeSpaces(this.value)">
+                    </div>
+                    
+                </div>
+            </div>
+            <br>
+            <input type= "button" onclick= "clearInput()" value= "Clear Data">
+            <input type="button"  id="addmore" onclick="addMore()" value="Add More">
+            <input type="button" onclick="submitMore()" value="Submit More">
+            <p id="demo"></p>
+            
+            
+            <script lang="javascript" type="text/javascript" src="scripts.js"></script>
+    
+        </form>
+    </div>
+</body>
+</html>
