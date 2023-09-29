@@ -40,8 +40,8 @@
                     <div class="item_sub">
                         <label for="qty">Quantity: </label><input type="text" id="qty" placeholder="Enter quantity" onblur="this.value=removeSpaces(this.value)">
                         <label for="item_code">Item Code: </label><input type="text" id="item_code" placeholder="Enter item code" onblur="this.value=removeSpaces(this.value)">
-                        <label for="item_description">Item Description: </label><input type="text" id="item_description" placeholder="Enter item description" onblur="this.value=removeSpaces(this.value)"> +
-                        <input type="checkbox" id="checkMulti"><label for="checkMulti">Multi Item Approval</label>
+                        <label for="item_description">Item Description: </label><input type="text" id="item_description" placeholder="Enter item description" onblur="this.value=removeSpaces(this.value)"> 
+                        <!-- <input type="checkbox" id="checkMulti"><label for="checkMulti">Multi Item Approval</label> -->
                     </div>
                     <br>
                     <div class="item_price">
@@ -56,10 +56,11 @@
             <br>
             <input type="button" id="submit" onclick="myFunction()" value="Submit">
             <input type= "button" onclick= "clearInput()" value= "Clear Data">
-            <input type="button"  id="addmore" onclick="addMore()" value="Add More">
-            <input type="button" onclick="submitMore()" value="Submit More">
+            <!-- <input type="button"  id="addmore" onclick="addMore()" value="Add More">
+            <input type="button" onclick="submitMore()" value="Submit More"> -->
             <p id="demo"></p>
 
+            <script lang="javascript" type="text/javascript" src="core.js"></script>
             <script lang="javascript" type="text/javascript" src="scripts.js"></script>
 
         </form>
